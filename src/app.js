@@ -1,12 +1,10 @@
 import express from "express";
 import cors from "cors";
-import dotenv from "dotenv";
-dotenv.config();
+import { PORT } from "./config/env.config.js";
 import authRoutes from "./routes/auth.routes.js";
 import connectDb from "./config/db.js";
 import errorHandler from "./middlewares/errorHandler.js";
 const app = express();
-const PORT = process.env.PORT;
 
 //middleware
 app.use(express.json());
